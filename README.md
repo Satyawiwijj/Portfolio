@@ -14,5 +14,5 @@
 - Front-end and back-end web development.
 
 ## 📫 Get in Touch
-- [LinkedIn](#)  
-- [GitHub](#)
+- [LinkedIn](https://www.linkedin.com/in/satya-p-17b5611b8/)  
+- [GitHub](https://github.com/Satyawiwijj)
