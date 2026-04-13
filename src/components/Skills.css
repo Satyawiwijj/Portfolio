@@ -1,0 +1,35 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.skill-group {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.skill-group:hover { border-color: var(--teal); }
+
+.skill-group-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.skill-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.pill {
+  background: rgba(240,244,248,0.06);
+  border: 1px solid rgba(240,244,248,0.1);
+  color: var(--off-white);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+}

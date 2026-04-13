@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(13,148,136,0.18) 0%, transparent 70%);
+  top: 50%; left: 60%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 700px;
+  animation: fadeUp 0.9s ease both;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--teal-glow);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.78rem;
+  color: var(--teal-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.pulse-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 1.2rem;
+}
+
+h1 span { color: var(--teal-light); }
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--teal);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--teal-light);
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.btn-outline:hover { border-color: var(--teal); background: var(--teal-glow); transform: translateY(-2px); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 0 1.5rem; }
+}

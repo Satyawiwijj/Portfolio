@@ -1,0 +1,69 @@
+.exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.exp-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.exp-card:hover { border-color: var(--teal); transform: translateX(6px); }
+
+.exp-dot {
+  width: 10px; height: 10px;
+  background: var(--teal);
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.exp-body { flex: 1; }
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.exp-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--off-white);
+}
+
+.exp-period {
+  font-size: 0.78rem;
+  color: var(--teal);
+  background: var(--teal-glow);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+}
+
+.exp-org { color: var(--teal-light); font-size: 0.88rem; margin-bottom: 0.8rem; }
+
+.exp-bullets { list-style: none; }
+
+.exp-bullets li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 0.2rem 0 0.2rem 1rem;
+  position: relative;
+}
+
+.exp-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 0.7rem;
+  top: 0.28rem;
+}
